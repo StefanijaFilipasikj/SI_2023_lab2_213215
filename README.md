@@ -43,4 +43,77 @@ V(G) = 11
 
 Multiple Condition критериумот на условот if (user == null || user.getPassword() == null || user.getEmail() == null): 
 
-<ol><li><p>Test case for <code>user == null</code>:</p><ul><li>Input: <code>user = null</code></li><li>Expected output: <code>RuntimeException("Mandatory information missing!")</code></li></ul></li><li><p>Test case for <code>user.getPassword() == null</code>:</p><ul><li>Input: <code>user.getPassword() = null</code></li><li>Expected output: <code>RuntimeException("Mandatory information missing!")</code></li></ul></li><li><p>Test case for <code>user.getEmail() == null</code>:</p><ul><li>Input: <code>user.getEmail() = null</code></li><li>Expected output: <code>RuntimeException("Mandatory information missing!")</code></li></ul></li><li><p>Test case for <code>user.getUsername() == null</code>:</p><ul><li>Input: <code>user.getUsername() = null</code></li><li>Expected output: <code>user.getUsername() = user.getEmail()</code></li></ul></li><li><p>Test case for <code>user.getEmail()</code> without "@" and "." characters:</p><ul><li>Input: <code>user.getEmail() = "email"</code></li><li>Expected output: <code>same = 1</code></li></ul></li><li><p>Test case for <code>user.getEmail()</code> with existing email in <code>allUsers</code>:</p><ul><li>Input: <code>user.getEmail() = "existingEmail"</code></li><li>Expected output: <code>same &gt; 0</code></li></ul></li><li><p>Test case for <code>passwordLower.contains(user.getUsername().toLowerCase())</code>:</p><ul><li>Input: <code>passwordLower = "password"</code>, <code>user.getUsername() = "pass"</code></li><li>Expected output: <code>false</code></li></ul></li><li><p>Test case for <code>password.length() &lt; 8</code>:</p><ul><li>Input: <code>password = "pass"</code>, <code>password.length() = 4</code></li><li>Expected output: <code>false</code></li></ul></li><li><p>Test case for <code>!passwordLower.contains(" ")</code> and no special characters in password:</p><ul><li>Input: <code>passwordLower = "password"</code></li><li>Expected output: <code>false</code></li></ul></li><li><p>Test case for <code>!passwordLower.contains(" ")</code> and special character in password:</p><ul><li>Input: <code>passwordLower = "pass@word"</code>, <code>specialCharacters = "!#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_</code>{|}"`</li><li>Expected output: <code>same == 0</code></li></ul></li></ol>
+<ol>
+  <li>
+    Тест случај за `user == null`:
+    <ul>
+      <li>Влез: `user = null`</li>
+      <li>Очекуван излез: `RuntimeException("Обавезна информација недостасува!")`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `user.getPassword() == null`:
+    <ul>
+      <li>Влез: `user.getPassword() = null`</li>
+      <li>Очекуван излез: `RuntimeException("Обавезна информација недостасува!")`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `user.getEmail() == null`:
+    <ul>
+      <li>Влез: `user.getEmail() = null`</li>
+      <li>Очекуван излез: `RuntimeException("Обавезна информација недостасува!")`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `user.getUsername() == null`:
+    <ul>
+      <li>Влез: `user.getUsername() = null`</li>
+      <li>Очекуван излез: `user.getUsername() = user.getEmail()`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `user.getEmail()` без "@" и "." знаци:
+    <ul>
+      <li>Влез: `user.getEmail() = "email"`</li>
+      <li>Очекуван излез: `same = 1`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `user.getEmail()` со постоечка е-пошта во `allUsers`:
+    <ul>
+      <li>Влез: `user.getEmail() = "existingEmail"`</li>
+      <li>Очекуван излез: `same > 0`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `passwordLower.contains(user.getUsername().toLowerCase())`:
+    <ul>
+      <li>Влез: `passwordLower = "password"`, `user.getUsername() = "pass"`</li>
+      <li>Очекуван излез: `false`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `password.length() < 8`:
+    <ul>
+      <li>Влез: `password = "pass"`, `password.length() = 4`</li>
+      <li>Очекуван излез: `false`</li>
+    </ul>
+  </li>
+  <li>
+    Тест случај за `!passwordLower.contains(" ")` и нема специјални знаци во лозинката:
+    <ul>
+      <li>Влез: `passwordLower = "password"`</li>
+      <li>Очекуван излез: `false`</li>
+
+
+    </ul>
+  </li>
+  <li>
+    Тест случај за `!passwordLower.contains(" ")` и специјален знак во лозинката:
+    <ul>
+      <li>Влез: `passwordLower = "pass@word"`, `specialCharacters = "!#$%&amp;'()*+,-./:;&lt;=&gt;?@[]^_</code>{|}"`</li>
+      <li>Очекуван излез: `same == 0`</li>
+    </ul>
+  </li>
+</ol>
