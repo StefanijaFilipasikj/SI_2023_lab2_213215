@@ -105,8 +105,6 @@ Multiple Condition критериумот на условот if (user == null |
     <ul>
       <li>Влез: `passwordLower = "password"`</li>
       <li>Очекуван излез: `false`</li>
-
-
     </ul>
   </li>
   <li>
